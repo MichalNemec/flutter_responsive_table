@@ -57,8 +57,8 @@ class ResponsiveDatatable extends StatefulWidget {
   /// allow to styling the selected data row
   final TextStyle? selectedTextStyle;
 
-  final Widget? sortUpIcon;
-  final Widget? sortDownIcon;
+  final IconData? sortUpIcon;
+  final IconData? sortDownIcon;
 
   const ResponsiveDatatable({
     Key? key,
