@@ -1,5 +1,6 @@
 import 'package:adaptivex/adaptivex.dart';
 import 'package:flutter/material.dart';
+
 import 'datatable_header.dart';
 
 class ResponsiveDatatable extends StatefulWidget {
@@ -131,8 +132,8 @@ class _ResponsiveDatatableState extends State<ResponsiveDatatable> {
                           ),
                           if (widget.sortColumn != null && widget.sortColumn == header.value)
                             widget.sortAscending!
-                                ? const Icon(widget.sortDownIcon != null ? widget.sortDownIcon : Icons.arrow_downward, size: 15)
-                                : const Icon(widget.sortUpIcon != null ? widget.sortUpIcon : Icons.arrow_upward, size: 15)
+                                ? Icon(widget.sortDownIcon ?? Icons.arrow_downward, size: 15)
+                                : Icon(widget.sortUpIcon ?? Icons.arrow_upward, size: 15)
                         ],
                       ),
                       value: header.value,
