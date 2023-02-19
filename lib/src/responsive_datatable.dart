@@ -279,8 +279,8 @@ class _ResponsiveDatatableState extends State<ResponsiveDatatable> {
                                   ),
                                   if (widget.sortColumn != null && widget.sortColumn == header.value)
                                     widget.sortAscending!
-                                        ? const Icon(Icons.arrow_downward, size: 15)
-                                        : const Icon(Icons.arrow_upward, size: 15)
+                                        ? Icon(widget.sortDownIcon, size: 15)
+                                        : Icon(widget.sortUpIcon, size: 15)
                                 ],
                               ),
                             ),
