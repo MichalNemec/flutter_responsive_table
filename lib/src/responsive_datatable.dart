@@ -58,8 +58,8 @@ class ResponsiveDatatable extends StatefulWidget {
   /// allow to styling the selected data row
   final TextStyle? selectedTextStyle;
 
-  final IconData? sortUpIcon;
-  final IconData? sortDownIcon;
+  final IconData sortUpIcon;
+  final IconData sortDownIcon;
 
   const ResponsiveDatatable({
     Key? key,
@@ -92,8 +92,8 @@ class ResponsiveDatatable extends StatefulWidget {
     this.headerTextStyle,
     this.rowTextStyle,
     this.selectedTextStyle,
-    this.sortUpIcon,
-    this.sortDownIcon,
+    this.sortUpIcon = Icons.arrow_upward,
+    this.sortDownIcon = Icons.arrow_downward,
   }) : super(key: key);
 
   @override
@@ -132,8 +132,8 @@ class _ResponsiveDatatableState extends State<ResponsiveDatatable> {
                           ),
                           if (widget.sortColumn != null && widget.sortColumn == header.value)
                             widget.sortAscending!
-                                ? Icon(widget.sortDownIcon ?? Icons.arrow_downward, size: 15)
-                                : Icon(widget.sortUpIcon ?? Icons.arrow_upward, size: 15)
+                                ? Icon(widget.sortDownIcon, size: 15)
+                                : Icon(widget.sortUpIcon, size: 15)
                         ],
                       ),
                       value: header.value,
