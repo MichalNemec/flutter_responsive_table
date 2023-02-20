@@ -60,6 +60,7 @@ class ResponsiveDatatable extends StatefulWidget {
 
   final IconData sortUpIcon;
   final IconData sortDownIcon;
+  final MainAxisAligment mainAxisFooters;
 
   const ResponsiveDatatable({
     Key? key,
@@ -74,6 +75,7 @@ class ResponsiveDatatable extends StatefulWidget {
     this.title,
     this.actions,
     this.footers,
+    this.mainAxisFooters = MainAxisAlignment.end,
     this.sortColumn,
     this.sortAscending,
     this.isLoading = false,
@@ -447,7 +449,7 @@ class _ResponsiveDatatableState extends State<ResponsiveDatatable> {
               //footer
               if (widget.footers != null)
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: widget.mainAxisFooters,
                   children: [...widget.footers!],
                 )
             ],
