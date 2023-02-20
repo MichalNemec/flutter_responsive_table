@@ -60,7 +60,7 @@ class ResponsiveDatatable extends StatefulWidget {
 
   final IconData sortUpIcon;
   final IconData sortDownIcon;
-  final MainAxisAligment mainAxisFooters;
+  final MainAxisAlignment mainAxisFooters;
 
   const ResponsiveDatatable({
     Key? key,
